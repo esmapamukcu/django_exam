@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Öğrenci Kayıt Formu</title>
+</head>
+<body>
+<form action="" method="post"> {% csrf_token %}
+    <label><b>Ad:</b></label>
+    <input type="text" id="ad" placeholder="Adınızı Girin"  name="fname" size="50" required><br><br>
+    <label><b>Soyad:</b></label>
+    <input type="text" id="soyad" placeholder="Soyadınızı Girin"  name="lname" size="50" required><br><br>
+    <label><b>Bölüm:</b></label>
+    <input type="text" id="bolum" placeholder="Bölümünüzü Girin"  name="bolum" size="50" required><br><br>
+    <label><b>TCKN:</b></label>
+    <input type="text" id="tckn" placeholder="Tckn Girin"  name="tckn" size="50" required><br><br>
+    <input type="submit" value="Kaydet">
+
+<hr/>
+    {% if messages %}
+    {% for x in messages %}
+    <h2>{{x}}</h2>
+    {% endfor %}
+    {% endif %}
+
+
+</form>
+</body>
+</html>
